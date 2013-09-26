@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkWindow" id="window_main">
+    <property name="title" translatable="yes">OneTweet</property>
+    <property name="default_width">1000</property>
+    <property name="default_height">20</property>
+    <property name="decorated">False</property>
+    <signal name="destroy" handler="on_window_main_destroy"/>
+    <signal name="delete_event" handler="on_window_main_delete_event"/>
+    <child>
+      <object class="GtkHBox" id="hbox">
+        <property name="visible">True</property>
+        <child>
+          <object class="GtkEventBox" id="eventbox_label_mode">
+            <property name="visible_window">False</property>
+            <signal name="button_press_event" handler="on_eventbox_label_mode_button_press_event"/>
+            <child>
+              <object class="GtkLabel" id="label_mode">
+                <property name="width_request">32</property>
+                <property name="visible">True</property>
+                <property name="extension_events">all</property>
+                <property name="label" translatable="yes">OT</property>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+        <child>
+          <object class="GtkEntry" id="entry_tweet">
+            <property name="visible">True</property>
+            <property name="editable">False</property>
+            <property name="invisible_char">&#x25CF;</property>
+          </object>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkMenu" id="menu_app_commands">
+    <property name="visible">True</property>
+    <child>
+      <object class="GtkCheckMenuItem" id="checkmenuitem_pause">
+        <property name="visible">True</property>
+        <property name="tooltip_text">[Space]</property>
+        <property name="label" translatable="yes">Pause</property>
+        <property name="use_underline">True</property>
+        <signal name="toggled" handler="on_checkmenuitem_pause_toggled"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="menuitem_show_prev_tweet">
+        <property name="visible">True</property>
+        <property name="tooltip_text">[PageUp]</property>
+        <property name="label" translatable="yes">show prev tweet</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="on_menuitem_show_prev_tweet_activate"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="menuitem_show_next_tweet">
+        <property name="visible">True</property>
+        <property name="tooltip_text">[PageDown]</property>
+        <property name="label" translatable="yes">show next tweet</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="on_menuitem_show_next_tweet_activate"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="menuitem_quit">
+        <property name="visible">True</property>
+        <property name="tooltip_text" translatable="yes">[Ctrl + Q]</property>
+        <property name="label" translatable="yes">Quit</property>
+        <property name="use_underline">True</property>
+        <signal name="activate" handler="on_menuitem_quit_activate"/>
+      </object>
+    </child>
+  </object>
+</interface>

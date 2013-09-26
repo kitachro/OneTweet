@@ -91,7 +91,7 @@ onetweet.rbが入っているフォルダ（ディレクトリ）を好きな場
 * Quit - [Ctrl + Q] キー : プログラムを終了します。普通に[Alt + F4]でもOKです。
 
 
-# 以下のプログラムがあると、Windowsでより便利に使えます。
+# 以下のプログラムがあると、Windowsでより便利に使えます
 
 * AutoHotkey_L http://l.autohotkey.net/
 
@@ -100,8 +100,10 @@ AutoHotkey_Lはアーカイブに入っているonetweet.ahkを実行するの�
 ルダを指定するのと、コンソールウィンドウを隠すのに使っています。
 
 
-# このプログラムのGUI部分はGladeで作りました。GladeとRuby/GTK2を組み合わせたプログラミングの
-やり方については、チュートリアル程度ですが以下のページに情報があります。
+# このプログラムのGUI部分はGladeで作りました
+
+GladeとRuby/GTK2を組み合わせたプログラミングのやり方については、チュートリアル程度ですが以下の
+ページに情報があります。
 
 * http://ruby-gnome2.sourceforge.jp/ja/hiki.cgi?libglade2-tut
 　古いバージョンについての情報ですが参考にはなると思います。
